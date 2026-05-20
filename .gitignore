@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+myenv/
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment & secrets
+.env
+.env.local
+*.pem
+credentials.json
+
+# Database
+*.db
+backend/data/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Uploads & generated files
+backend/uploads/
+backend/reports/
+*.log
+
+# ML model cache (do not ignore backend/app/models ORM package)
+.cache/
+backend/.cache/

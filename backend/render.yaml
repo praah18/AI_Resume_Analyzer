@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: resume-analyzer-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://your-frontend.vercel.app
+      - key: DATABASE_URL
+        value: sqlite:///./data/resume_analyzer.db
